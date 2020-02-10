@@ -41,7 +41,7 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-        <router-link :to="{ path: '/'}">
+        <router-link class="home_link" :to="{ path: '/'}">
           <v-toolbar-title>I Strava You</v-toolbar-title>
         </router-link>
     </v-app-bar>
@@ -115,3 +115,10 @@ import { getStorageValue, cleanStorageValue } from './helpers/localstorage';
     }
   }
 </script>
+
+<style>
+a.home_link {
+  color: white;
+  text-decoration: none;
+}
+</style>
