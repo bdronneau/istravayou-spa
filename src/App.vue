@@ -6,7 +6,7 @@
       clipped
     >
       <v-list dense>
-        <v-list-item link>
+        <v-list-item link v-on:click="resetNav()" to="dashboard">
           <v-list-item-action>
             <v-icon>mdi-view-dashboard</v-icon>
           </v-list-item-action>
@@ -22,7 +22,7 @@
             <v-list-item-title>Settings</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link v-on:click="resetNav()" to="me">
           <v-list-item-action>
             <v-icon>mdi-account</v-icon>
           </v-list-item-action>
@@ -49,7 +49,9 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>I Strava You</v-toolbar-title>
+        <router-link to="{ path: '/'}">
+          <v-toolbar-title>I Strava You</v-toolbar-title>
+        </router-link>
     </v-app-bar>
 
     <v-content>
@@ -112,7 +114,11 @@ import { getStorageValue, cleanStorageValue } from './helpers/localstorage';
         this.$log.debug("diconnect stuff")
         this.cleanStorageValue()
         this.$store.resetState
+        this.resetNav()
         this.$router.push(({ name: 'home' }))
+      },
+      resetNav: function () {
+        this.drawer = false
       }
     }
   }
