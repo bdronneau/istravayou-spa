@@ -17,12 +17,12 @@ const routes = [
     component: Strava
   },
   {
-    path: '/me',
-    name: 'aboutme',
+    path: '/account',
+    name: 'account',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "aboutme" */ '../views/AboutMe.vue')
+    component: () => import(/* webpackChunkName: "account" */ '../views/Account.vue')
   },
   {
     path: '/dashboard',

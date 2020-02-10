@@ -14,20 +14,12 @@
             <v-list-item-title>Dashboard</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link v-on:click="resetNav()" to="account">
           <v-list-item-action>
             <v-icon>mdi-settings</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Settings</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link v-on:click="resetNav()" to="me">
-          <v-list-item-action>
-            <v-icon>mdi-account</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>About</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item
@@ -49,7 +41,7 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-        <router-link to="{ path: '/'}">
+        <router-link :to="{ path: '/'}">
           <v-toolbar-title>I Strava You</v-toolbar-title>
         </router-link>
     </v-app-bar>

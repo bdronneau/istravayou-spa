@@ -21,7 +21,7 @@ export default {
         // Save in API
         // TODO: handle error
         authMeAPI().then(() => {
-            this.$router.push(({ name: 'aboutme' }))
+            this.$router.push(({ name: 'account' }))
         })
     },
     methods: {

@@ -32,7 +32,7 @@
 import { retrieveAthlete, checkAthlete, authMeAPI } from "../helpers/api"
 
 export default {
-    name: 'aboutme',
+    name: 'account',
     data () {
       return {
         athlete: {},
