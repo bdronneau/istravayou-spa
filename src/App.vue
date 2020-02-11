@@ -80,7 +80,11 @@
       isLoading: true,
       drawer: false,
       code: null,
-      lsFields: ['code']
+      lsFields: ['code'],
+      status: {
+        internet: true,
+        api: false
+      }
     }),
     mounted () {
       this.lsFields.forEach(field => {
@@ -111,6 +115,13 @@
       },
       resetNav: function () {
         this.drawer = false
+      },
+      status: function () {
+        if(navigator.onLine){
+          this.status.internet = true;
+        }else{
+          this.status.internet = false;
+        }
       }
     }
   }
