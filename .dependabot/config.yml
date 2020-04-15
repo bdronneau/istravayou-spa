@@ -3,6 +3,7 @@
 version: 1
 update_configs:
   - package_manager: "javascript"
+    automerged_updates: true
     directory: "/"
     update_schedule: "weekly"
     commit_message:
