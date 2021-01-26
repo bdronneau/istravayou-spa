@@ -8,7 +8,7 @@ update_configs:
           dependency_type: "all"
           update_type: "all"
     directory: "/"
-    update_schedule: "weekly"
+    update_schedule: "monthly"
     commit_message:
       prefix: "chore"
       include_scope: true
